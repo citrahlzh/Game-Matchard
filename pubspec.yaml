@@ -1,0 +1,47 @@
+name: game_matchard
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.4
+
+dependencies:
+  bloc: ^8.1.4
+  flutter_bloc: ^8.1.4
+  equatable: ^2.0.3
+  audioplayers: ^6.1.0
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+  fonts:
+    - family: Bright
+      fonts:
+        - asset: assets/fonts/Bright_DEMO.ttf
+    - family: Larken Regular
+      fonts:
+        - asset: assets/fonts/LarkenDEMO-Regular.ttf
+    - family: Larken Medium
+      fonts:
+        - asset: assets/fonts/LarkenDEMO-Medium.otf
+    - family: Larken Bold
+      fonts:
+        - asset: assets/fonts/LarkenDEMO-Bold.otf
+    - family: Milanello
+      fonts:
+        - asset: assets/fonts/Milanello-FreePersonal.otf
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/icon.png"
