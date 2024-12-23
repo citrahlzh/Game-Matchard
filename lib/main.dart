@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:game_matchard/presentation/dashboard.dart';
-import 'package:game_matchard/presentation/success.dart';
 
 void main() {
   runApp(const MainApp());

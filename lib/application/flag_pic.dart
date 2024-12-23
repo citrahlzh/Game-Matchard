@@ -36,12 +36,15 @@ class CardFlagWidget extends StatelessWidget {
             child: isFlipped
                 ? content.contains('.svg') || content.contains('.png')
                     ? Image(image: AssetImage(content))
-                    : Text(
-                        content,
-                        style: const TextStyle(
-                          color: Color(0XFFE8D7F1),
-                          fontFamily: 'Bright',
-                          fontSize: 25,
+                    : Center(
+                        child: Text(
+                          content,
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                            color: Color(0XFFE8D7F1),
+                            fontFamily: 'Bright',
+                            fontSize: 25,
+                          ),
                         ),
                       ) // Display text
                 : const Image(
