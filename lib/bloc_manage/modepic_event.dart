@@ -7,7 +7,7 @@ abstract class ModePicEvent extends Equatable {
   List<Object> get props => [];
 }
 
-class InitializeGameEvent extends ModePicEvent {}
+class InitializePicGameEvent extends ModePicEvent {}
 
 class FlipCardEvent extends ModePicEvent {
   final int index;

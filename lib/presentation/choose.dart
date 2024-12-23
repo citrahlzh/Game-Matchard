@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:game_matchard/bloc_manage/modepic_bloc.dart';
+import 'package:game_matchard/bloc_manage/modeflag_bloc.dart';
 import 'package:game_matchard/presentation/game/memory_pictures.dart';
 import 'package:game_matchard/presentation/game/memory_flags.dart';
 
@@ -44,142 +45,141 @@ class ChoosePage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Stack(children: [
-                              Transform.translate(
-                                offset: const Offset(60, 0),
-                                child: const SizedBox(
-                                  width: 300,
-                                  height: 470,
-                                  child: DecoratedBox(
-                                      decoration: BoxDecoration(
-                                    color: Color(0xFFE8D7F1),
-                                  )),
-                                ),
-                              ),
-                              SizedBox(
-                                width: 300,
-                                height: 470,
-                                child: DecoratedBox(
-                                  decoration: const BoxDecoration(
-                                    color: Color(0xFF7E2E84),
-                                  ),
-                                  child: Padding(
-                                    padding: const EdgeInsets.fromLTRB(
-                                        20, 100, 20, 20),
-                                    child: Column(
-                                        mainAxisAlignment:
-                                            MainAxisAlignment.center,
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          const Text(
-                                            'Santai',
-                                            textAlign: TextAlign.left,
-                                            style: TextStyle(
-                                              color: Color(0XFFE8D7F1),
-                                              fontFamily: 'Bright',
-                                              fontSize: 65,
-                                            ),
-                                          ),
-                                          const Text(
-                                            'Pasangkan gambar yang mirip',
-                                            textAlign: TextAlign.left,
-                                            style: TextStyle(
-                                              fontFamily: 'Larken Regular',
-                                              fontSize: 30,
-                                              color: Color(0xFFE8D7F1),
-                                            ),
-                                          ),
-                                          Spacer(),
-                                          GestureDetector(
-                                            onTap: () {
-                                              Navigator.push(
-                                                  context,
-                                                  MaterialPageRoute(
-                                                      builder: (_) => BlocProvider(
-                                                          create: (context) =>
-                                                              ModePicBloc()
-                                                                ..add(
-                                                                    InitializeGameEvent()),
-                                                          child:
-                                                              const ModePicPage())));
-                                            },
-                                            child: const Align(
-                                              alignment: Alignment.bottomRight,
-                                              child: Image(
-                                                image: AssetImage(
-                                                    '../../../assets/images/arrowforward_white.png'),
-                                                height: 60,
-                                              ),
-                                            ),
-                                          )
-                                        ]),
-                                  ),
-                                ),
-                              ),
-                            ]),
-                            SizedBox(width: 100),
-                            const Image(
-                                image: AssetImage(
-                                    '../../../assets/images/logo.png')),
-                            SizedBox(width: 100),
-                            Stack(
-                              children: [
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (_) => BlocProvider(
+                                            create: (context) => ModePicBloc()
+                                              ..add(InitializePicGameEvent()),
+                                            child: const ModePicPage())));
+                              },
+                              child: Stack(children: [
                                 Transform.translate(
-                                  offset: const Offset(-60, 0),
+                                  offset: const Offset(60, 0),
                                   child: const SizedBox(
                                     width: 300,
                                     height: 470,
                                     child: DecoratedBox(
                                         decoration: BoxDecoration(
-                                      color: Color(0xFF7E2E84),
+                                      color: Color(0xFFE8D7F1),
                                     )),
                                   ),
                                 ),
-                                SizedBox(
+                                const SizedBox(
                                   width: 300,
                                   height: 470,
                                   child: DecoratedBox(
-                                    decoration: const BoxDecoration(
-                                      color: Color(0xFFE8D7F1),
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFF7E2E84),
                                     ),
                                     child: Padding(
-                                      padding: const EdgeInsets.fromLTRB(
-                                          20, 100, 20, 20),
+                                      padding:
+                                          EdgeInsets.fromLTRB(20, 100, 20, 20),
                                       child: Column(
                                           mainAxisAlignment:
                                               MainAxisAlignment.center,
                                           crossAxisAlignment:
                                               CrossAxisAlignment.start,
                                           children: [
-                                            const Text(
-                                              'Tantangan',
+                                            Text(
+                                              'Santai',
                                               textAlign: TextAlign.left,
                                               style: TextStyle(
-                                                color: Color(0XFF7E2E84),
+                                                color: Color(0XFFE8D7F1),
                                                 fontFamily: 'Bright',
                                                 fontSize: 65,
                                               ),
                                             ),
-                                            const Text(
-                                              'Pasangkan bendera dengan nama negara yang sesuai',
+                                            Text(
+                                              'Pasangkan gambar yang mirip',
                                               textAlign: TextAlign.left,
                                               style: TextStyle(
                                                 fontFamily: 'Larken Regular',
                                                 fontSize: 30,
-                                                color: Color(0xFF7E2E84),
+                                                color: Color(0xFFE8D7F1),
                                               ),
                                             ),
                                             Spacer(),
-                                            GestureDetector(
-                                              onTap: () {
-                                                Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(
-                                                        builder: (context) =>
-                                                            const ModeFlag()));
-                                              },
-                                              child: const Align(
+                                            Align(
+                                              alignment: Alignment.bottomRight,
+                                              child: Image(
+                                                image: AssetImage(
+                                                    '../../../assets/images/arrowforward_white.png'),
+                                                height: 60,
+                                              ),
+                                            )
+                                          ]),
+                                    ),
+                                  ),
+                                ),
+                              ]),
+                            ),
+                            SizedBox(width: 100),
+                            const Image(
+                                image: AssetImage(
+                                    '../../../assets/images/logo.png')),
+                            SizedBox(width: 100),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (_) => BlocProvider(
+                                            create: (context) => ModeFlagBloc()
+                                              ..add(InitializeFlagGameEvent()),
+                                            child: const ModeFlagPage())));
+                              },
+                              child: Stack(
+                                children: [
+                                  Transform.translate(
+                                    offset: const Offset(-60, 0),
+                                    child: const SizedBox(
+                                      width: 300,
+                                      height: 470,
+                                      child: DecoratedBox(
+                                          decoration: BoxDecoration(
+                                        color: Color(0xFF7E2E84),
+                                      )),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    width: 300,
+                                    height: 470,
+                                    child: DecoratedBox(
+                                      decoration: BoxDecoration(
+                                        color: Color(0xFFE8D7F1),
+                                      ),
+                                      child: Padding(
+                                        padding: EdgeInsets.fromLTRB(
+                                            20, 100, 20, 20),
+                                        child: Column(
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.center,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
+                                            children: [
+                                              Text(
+                                                'Tantangan',
+                                                textAlign: TextAlign.left,
+                                                style: TextStyle(
+                                                  color: Color(0XFF7E2E84),
+                                                  fontFamily: 'Bright',
+                                                  fontSize: 65,
+                                                ),
+                                              ),
+                                              Text(
+                                                'Pasangkan bendera dengan nama negara yang sesuai',
+                                                textAlign: TextAlign.left,
+                                                style: TextStyle(
+                                                  fontFamily: 'Larken Regular',
+                                                  fontSize: 30,
+                                                  color: Color(0xFF7E2E84),
+                                                ),
+                                              ),
+                                              Spacer(),
+                                              Align(
                                                 alignment:
                                                     Alignment.bottomRight,
                                                 child: Image(
@@ -187,13 +187,13 @@ class ChoosePage extends StatelessWidget {
                                                       '../../../assets/images/arrowforward_purple.png'),
                                                   height: 60,
                                                 ),
-                                              ),
-                                            )
-                                          ]),
+                                              )
+                                            ]),
+                                      ),
                                     ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           ],
                         )

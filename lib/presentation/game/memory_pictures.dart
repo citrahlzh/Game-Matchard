@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:game_matchard/application/card_pic.dart';
 import 'package:game_matchard/bloc_manage/modepic_bloc.dart';
-import 'package:game_matchard/presentation/dashboard.dart';
-// import '../success.dart';
-// import '../failed.dart';
+import 'package:game_matchard/presentation/choose.dart';
+import '../success.dart';
+import '../failed.dart';
 
 class ModePicPage extends StatelessWidget {
   const ModePicPage({super.key});
@@ -13,7 +13,26 @@ class ModePicPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: BlocBuilder<ModePicBloc, ModePicState>(builder: (context, state) {
+        home:
+            BlocConsumer<ModePicBloc, ModePicState>(listener: (context, state) {
+          if (state.isGameFailed) {
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => FailedPage()),
+              );
+            });
+          }
+
+          if (state.isGameSuccess) {
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => SuccessPage()),
+              );
+            });
+          }
+        }, builder: (context, state) {
           final remainingTime = state.remainingTime;
           final minutes = (remainingTime ~/ 60).toString().padLeft(2, '0');
           final seconds = (remainingTime % 60).toString().padLeft(2, '0');
@@ -27,24 +46,21 @@ class ModePicPage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      // GestureDetector(
-                      //   onTap: () {
-                      //     Navigator.pop(context);
-                      //   },
-                      //   child: const Image(
-                      //       height: 70,
-                      //       image: AssetImage(
-                      //           '../../assets/images/arrowback_white.png')),
-                      // ),
                       SizedBox(
-                        width: 150,
-                        child: Text(
-                          textAlign: TextAlign.left,
-                          '${minutes}:${seconds}',
-                          style: const TextStyle(
-                            color: Color(0XFFE8D7F1),
-                            fontFamily: 'Milanello',
-                            fontSize: 50,
+                        width: 160,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ChoosePage()));
+                          },
+                          child: const Align(
+                            alignment: Alignment.centerLeft,
+                            child: Image(
+                                height: 55,
+                                image: AssetImage(
+                                    '../../assets/images/arrowback_white.png')),
                           ),
                         ),
                       ),
@@ -69,18 +85,18 @@ class ModePicPage extends StatelessWidget {
                                   '../../assets/images/logo_white.png'))
                         ],
                       ),
-                      GestureDetector(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => const DashboardPage()));
-                        },
-                        child: const Image(
-                            height: 70,
-                            image: AssetImage(
-                                '../../assets/images/arrowforward_white.png')),
-                      )
+                      SizedBox(
+                        width: 160,
+                        child: Text(
+                          textAlign: TextAlign.right,
+                          '${minutes}:${seconds}',
+                          style: const TextStyle(
+                            color: Color(0XFFE8D7F1),
+                            fontFamily: 'Milanello',
+                            fontSize: 50,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                 ),
@@ -137,23 +153,3 @@ class ModePicPage extends StatelessWidget {
         }));
   }
 }
-                
-      
-                // if (state.isGameFailed) {
-                //   WidgetsBinding.instance.addPostFrameCallback((_) {
-                //     Navigator.pushReplacement(
-                //       context,
-                //       MaterialPageRoute(builder: (context) => FailedPage()),
-                //     );
-                //   });
-                // }
-      
-                // if (state.isGameSuccess) {
-                //   WidgetsBinding.instance.addPostFrameCallback((_) {
-                //     Navigator.pushReplacement(
-                //       context,
-                //       MaterialPageRoute(builder: (context) => SuccessPage()),
-                //     );
-                //   });
-                // }
- 

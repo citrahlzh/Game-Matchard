@@ -83,7 +83,7 @@ class FailedPage extends StatelessWidget {
                             opacity: 1.0)),
                     child: Center(
                       child: Text(
-                        'Berhasil',
+                        'Waktu Habis',
                         style: TextStyle(
                           fontFamily: 'Larken Bold',
                           fontSize: 200,

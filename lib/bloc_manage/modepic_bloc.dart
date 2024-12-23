@@ -13,12 +13,12 @@ class ModePicBloc extends Bloc<ModePicEvent, ModePicState> {
   int _start = _timelimite;
 
   ModePicBloc() : super(const ModePicState(cards: [], flippedCards: [])) {
-    on<InitializeGameEvent>(_onInitializeGame);
+    on<InitializePicGameEvent>(_onInitializeGame);
     on<FlipCardEvent>(_onFlipCard);
   }
 
   Future<void> _onInitializeGame(
-      InitializeGameEvent event, Emitter<ModePicState> emit) async {
+      InitializePicGameEvent event, Emitter<ModePicState> emit) async {
     final shuffledCards = cardPictures..shuffle(Random());
     final flippedCards = List<bool>.filled(shuffledCards.length, false);
 
@@ -40,6 +40,9 @@ class ModePicBloc extends Bloc<ModePicEvent, ModePicState> {
       if (_start >= 0) {
         _start--;
         emit(state.copyWith(remainingTime: _start));
+        if (state.score == cardPictures.length ~/ 2) {
+          emit(state.copyWith(isGameSuccess: true));
+        }
       } else {
         timer.cancel();
         if (!isClosed) {
@@ -51,10 +54,9 @@ class ModePicBloc extends Bloc<ModePicEvent, ModePicState> {
 
   void _onTimeExpired() {
     if (state.score == cardPictures.length ~/ 2) {
-      // emit(state.copyWith(isGameActive: false, isGameSuccess: true));
       print("Permainan selesai dengan sukses!");
     } else {
-      // emit(state.copyWith(isGameActive: false, isGameFailed: true));
+      emit(state.copyWith(isGameFailed: true));
       print("Waktu habis! Permainan gagal.");
     }
   }
