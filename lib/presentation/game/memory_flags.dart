@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:game_matchard/application/card_pic.dart';
 import 'package:game_matchard/application/flag_pic.dart';
 import 'package:game_matchard/bloc_manage/modeflag_bloc.dart';
 import 'package:game_matchard/presentation/choose.dart';

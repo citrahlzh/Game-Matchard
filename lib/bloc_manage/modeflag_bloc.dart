@@ -33,9 +33,6 @@ class ModeFlagBloc extends Bloc<ModeFlagEvent, ModeFlagState> {
       cardPairs[card.matchKey] = card.imagePath;
     }
 
-    // final pairedCards = pairedImages + pairedTexts;
-    // pairedCards.shuffle(random);
-
     emit(ModeFlagState(
         cards: pairedCards,
         texts: List<String>.filled(pairedCards.length, ''), // Empty for now
