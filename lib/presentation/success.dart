@@ -69,7 +69,7 @@ class SuccessPage extends StatelessWidget {
             children: [
               Container(
                 height: 15,
-                color: Color(0xFFE8D7F1),
+                color: const Color(0xFFE8D7F1),
               ),
               const Expanded(
                 child: DecoratedBox(

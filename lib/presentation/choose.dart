@@ -116,11 +116,11 @@ class ChoosePage extends StatelessWidget {
                                 ),
                               ]),
                             ),
-                            SizedBox(width: 100),
+                            const SizedBox(width: 100),
                             const Image(
                                 image: AssetImage(
                                     '../../../assets/images/logo.png')),
-                            SizedBox(width: 100),
+                            const SizedBox(width: 100),
                             GestureDetector(
                               onTap: () {
                                 Navigator.push(
