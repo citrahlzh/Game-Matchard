@@ -19,7 +19,12 @@ class ModeFlagPage extends StatelessWidget {
             WidgetsBinding.instance.addPostFrameCallback((_) {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => FailedPage()),
+                MaterialPageRoute(builder: (context) => FailedPage(
+                  appbarBackground: const Color(0xFFE8D7F1),
+                  appbarColor: const Color(0xFF7E2E84),
+                  appbarLogo: '../../assets/images/logo_purple.png',
+                  appbarIcon: '../../assets/images/arrowforward_purple.png'
+                )),
               );
             });
           }
@@ -28,7 +33,12 @@ class ModeFlagPage extends StatelessWidget {
             WidgetsBinding.instance.addPostFrameCallback((_) {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => SuccessPage()),
+                MaterialPageRoute(builder: (context) => SuccessPage(
+                  appbarBackground: const Color(0xFFE8D7F1),
+                  appbarColor: const Color(0xFF7E2E84),
+                  appbarLogo: '../../assets/images/logo_purple.png',
+                  appbarIcon: '../../assets/images/arrowforward_purple.png'
+                )),
               );
             });
           }

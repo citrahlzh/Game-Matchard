@@ -2,7 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:game_matchard/presentation/dashboard.dart';
 
 class SuccessPage extends StatelessWidget {
-  const SuccessPage({super.key});
+  final Color appbarBackground;
+  final Color appbarColor;
+  final String appbarLogo;
+  final String appbarIcon;
+
+  const SuccessPage({
+    Key? key,
+    required this.appbarBackground,
+    required this.appbarColor,
+    required this.appbarLogo,
+    required this.appbarIcon,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +22,7 @@ class SuccessPage extends StatelessWidget {
         home: Scaffold(
           appBar: AppBar(
             toolbarHeight: 120,
-            backgroundColor: const Color(0xFF7E2E84),
+            backgroundColor: appbarBackground,
             title: Padding(
               padding: const EdgeInsets.fromLTRB(20, 8.0, 20, 8.0),
               child: Row(
@@ -28,7 +39,7 @@ class SuccessPage extends StatelessWidget {
                   //       image: AssetImage(
                   //           '../../assets/images/arrowback_white.png')),
                   // ),
-                  const Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -36,17 +47,15 @@ class SuccessPage extends StatelessWidget {
                           style: TextStyle(
                               fontFamily: 'Larken Bold',
                               fontSize: 70,
-                              color: Color(0xFFE8D7F1),
-                              shadows: [
+                              color: appbarColor,
+                              shadows: const [
                                 Shadow(
                                     color: Color(0x5F1E1E1E),
                                     offset: Offset(0.0, 8.0),
                                     blurRadius: 1.8)
                               ])),
-                      SizedBox(width: 15),
-                      Image(
-                          image:
-                              AssetImage('../../assets/images/logo_white.png'))
+                      const SizedBox(width: 15),
+                      Image(image: AssetImage(appbarLogo))
                     ],
                   ),
                   GestureDetector(
@@ -56,10 +65,7 @@ class SuccessPage extends StatelessWidget {
                           MaterialPageRoute(
                               builder: (context) => const DashboardPage()));
                     },
-                    child: const Image(
-                        height: 70,
-                        image: AssetImage(
-                            '../../assets/images/arrowforward_white.png')),
+                    child: Image(height: 70, image: AssetImage(appbarIcon)),
                   )
                 ],
               ),
@@ -69,7 +75,7 @@ class SuccessPage extends StatelessWidget {
             children: [
               Container(
                 height: 15,
-                color: const Color(0xFFE8D7F1),
+                color: appbarColor,
               ),
               const Expanded(
                 child: DecoratedBox(

@@ -19,7 +19,12 @@ class ModePicPage extends StatelessWidget {
             WidgetsBinding.instance.addPostFrameCallback((_) {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => FailedPage()),
+                MaterialPageRoute(builder: (context) => const FailedPage(
+                  appbarBackground: Color(0xFF7E2E84),
+                  appbarColor: Color(0xFFE8D7F1),
+                  appbarLogo: '../../assets/images/logo_white.png',
+                  appbarIcon: '../../assets/images/arrowforward_white.png'
+                )),
               );
             });
           }
@@ -28,7 +33,12 @@ class ModePicPage extends StatelessWidget {
             WidgetsBinding.instance.addPostFrameCallback((_) {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => SuccessPage()),
+                MaterialPageRoute(builder: (context) => SuccessPage(
+                  appbarBackground: const Color(0xFF7E2E84),
+                  appbarColor: const Color(0xFFE8D7F1),
+                  appbarLogo: '../../assets/images/logo_white.png',
+                  appbarIcon: '../../assets/images/arrowforward_white.png'
+                )),
               );
             });
           }

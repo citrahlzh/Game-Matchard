@@ -8,7 +8,7 @@ part 'modeflag_state.dart';
 part 'modeflag_event.dart';
 
 class ModeFlagBloc extends Bloc<ModeFlagEvent, ModeFlagState> {
-  static const int _timelimite = 120;
+  static const int _timelimite = 180;
   late Timer time;
   int _start = _timelimite;
 

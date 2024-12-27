@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:game_matchard/bloc_manage/modepic_bloc.dart';
 import 'package:game_matchard/bloc_manage/modeflag_bloc.dart';
+import 'package:game_matchard/presentation/dashboard.dart';
 import 'package:game_matchard/presentation/game/memory_pictures.dart';
 import 'package:game_matchard/presentation/game/memory_flags.dart';
 
@@ -207,7 +208,10 @@ class ChoosePage extends StatelessWidget {
               width: 70,
               child: FloatingActionButton(
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const DashboardPage()));
                 },
                 backgroundColor: Colors.transparent,
                 focusColor: Colors.transparent,

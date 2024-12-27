@@ -8,7 +8,7 @@ part 'modepic_state.dart';
 part 'modepic_event.dart';
 
 class ModePicBloc extends Bloc<ModePicEvent, ModePicState> {
-  static const int _timelimite = 120;
+  static const int _timelimite = 180;
   late Timer time;
   int _start = _timelimite;
 

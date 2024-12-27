@@ -16,7 +16,7 @@ class ModePicState extends Equatable {
     this.selectedIndex1 = -1,
     this.selectedIndex2 = -1,
     this.score = 0,
-    this.remainingTime = 120,
+    this.remainingTime = 180,
     this.isGameSuccess = false,
     this.isGameFailed = false,
   });
@@ -28,7 +28,7 @@ class ModePicState extends Equatable {
       selectedIndex1: -1,
       selectedIndex2: -1,
       score: 0,
-      remainingTime: 120,
+      remainingTime: 180,
       isGameSuccess: false,
       isGameFailed: false,
     );
