@@ -61,10 +61,8 @@ class ModeFlagBloc extends Bloc<ModeFlagEvent, ModeFlagState> {
 
   void _onTimeExpired() {
     if (state.score == cardFlags.length ~/ 2) {
-      print("Permainan selesai dengan sukses!");
     } else {
       emit(state.copyWith(isGameFailed: true));
-      print("Waktu habis! Permainan gagal.");
     }
   }
 
@@ -84,10 +82,7 @@ class ModeFlagBloc extends Bloc<ModeFlagEvent, ModeFlagState> {
       final selectedIndex1 = state.selectedIndex1;
       final card1 = state.cards[selectedIndex1];
       final card2 = state.cards[event.index];
-
-      print('Kartu pertama: $card1, Kartu kedua: $card2');
-      print('Mencocokkan kartu ${state.cardPairs[card1]} dan $card2');
-
+      
       emit(state.copyWith(
         flippedCards: updatedFlippedCards,
         selectedIndex2: event.index,

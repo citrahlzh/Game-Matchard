@@ -19,12 +19,13 @@ class ModePicPage extends StatelessWidget {
             WidgetsBinding.instance.addPostFrameCallback((_) {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => const FailedPage(
-                  appbarBackground: Color(0xFF7E2E84),
-                  appbarColor: Color(0xFFE8D7F1),
-                  appbarLogo: '../../assets/images/logo_white.png',
-                  appbarIcon: '../../assets/images/arrowforward_white.png'
-                )),
+                MaterialPageRoute(
+                    builder: (context) => const FailedPage(
+                        appbarBackground: Color(0xFF7E2E84),
+                        appbarColor: Color(0xFFE8D7F1),
+                        appbarLogo: '../../assets/images/logo_white.png',
+                        appbarIcon:
+                            '../../assets/images/arrowforward_white.png')),
               );
             });
           }
@@ -33,12 +34,13 @@ class ModePicPage extends StatelessWidget {
             WidgetsBinding.instance.addPostFrameCallback((_) {
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => SuccessPage(
-                  appbarBackground: const Color(0xFF7E2E84),
-                  appbarColor: const Color(0xFFE8D7F1),
-                  appbarLogo: '../../assets/images/logo_white.png',
-                  appbarIcon: '../../assets/images/arrowforward_white.png'
-                )),
+                MaterialPageRoute(
+                    builder: (context) => const SuccessPage(
+                        appbarBackground: Color(0xFF7E2E84),
+                        appbarColor: Color(0xFFE8D7F1),
+                        appbarLogo: '../../assets/images/logo_white.png',
+                        appbarIcon:
+                            '../../assets/images/arrowforward_white.png')),
               );
             });
           }
@@ -60,10 +62,155 @@ class ModePicPage extends StatelessWidget {
                         width: 160,
                         child: GestureDetector(
                           onTap: () {
-                            Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => ChoosePage()));
+                            // Navigator.push(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: (context) => const ChoosePage()));
+                            showDialog(
+                                context: context,
+                                builder: (context) {
+                                  return AlertDialog(
+                                      backgroundColor: Colors.transparent,
+                                      content: Center(
+                                        child: SizedBox(
+                                          width: 700,
+                                          height: 400,
+                                          child: DecoratedBox(
+                                            decoration: const BoxDecoration(
+                                              color: Color(0xFF7E2E84),
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: Color(0x5F1E1E1E),
+                                                  blurRadius:
+                                                      1.5, // Blur radius
+                                                  offset: Offset(8, 8),
+                                                )
+                                              ],
+                                            ),
+                                            child: Center(
+                                              child: Padding(
+                                                padding:
+                                                    const EdgeInsets.all(50),
+                                                child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
+                                                  crossAxisAlignment:
+                                                      CrossAxisAlignment.center,
+                                                  children: [
+                                                    const Text(
+                                                      'Apakah kamu ingin keluar dari permainan?',
+                                                      textAlign:
+                                                          TextAlign.center,
+                                                      style: TextStyle(
+                                                          color:
+                                                              Color(0xFFE8D7F1),
+                                                          fontFamily:
+                                                              'Larken Bold',
+                                                          fontSize: 45),
+                                                    ),
+                                                    const SizedBox(height: 70),
+                                                    Row(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      children: [
+                                                        GestureDetector(
+                                                          onTap: () {
+                                                            Navigator.pop(
+                                                                context);
+                                                          },
+                                                          child: const SizedBox(
+                                                            height: 50,
+                                                            width: 100,
+                                                            child: DecoratedBox(
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                color: Color(
+                                                                    0xFFE8D7F1),
+                                                                boxShadow: [
+                                                                  BoxShadow(
+                                                                    color: Color(
+                                                                        0x5F1E1E1E),
+                                                                    blurRadius:
+                                                                        1.5, // Blur radius
+                                                                    offset:
+                                                                        Offset(
+                                                                            4,
+                                                                            4),
+                                                                  )
+                                                                ],
+                                                              ),
+                                                              child: Center(
+                                                                child: Text(
+                                                                    'Tidak',
+                                                                    style: TextStyle(
+                                                                        color: Color(
+                                                                            0xFF7E2E84),
+                                                                        fontFamily:
+                                                                            'Larken Regular',
+                                                                        fontSize:
+                                                                            20)),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        ),
+                                                        const SizedBox(
+                                                          width: 100,
+                                                        ),
+                                                        GestureDetector(
+                                                          onTap: () {
+                                                            Navigator.push(
+                                                                context,
+                                                                MaterialPageRoute(
+                                                                    builder:
+                                                                        (context) =>
+                                                                            const ChoosePage()));
+                                                          },
+                                                          child: const SizedBox(
+                                                            height: 50,
+                                                            width: 100,
+                                                            child: DecoratedBox(
+                                                              decoration:
+                                                                  BoxDecoration(
+                                                                color: Color(
+                                                                    0xFFE8D7F1),
+                                                                boxShadow: [
+                                                                  BoxShadow(
+                                                                    color: Color(
+                                                                        0x5F1E1E1E),
+                                                                    blurRadius:
+                                                                        1.5, // Blur radius
+                                                                    offset:
+                                                                        Offset(
+                                                                            4,
+                                                                            4),
+                                                                  )
+                                                                ],
+                                                              ),
+                                                              child: Center(
+                                                                child: Text(
+                                                                    'Ya',
+                                                                    style: TextStyle(
+                                                                        color: Color(
+                                                                            0xFF7E2E84),
+                                                                        fontFamily:
+                                                                            'Larken Regular',
+                                                                        fontSize:
+                                                                            20)),
+                                                              ),
+                                                            ),
+                                                          ),
+                                                        )
+                                                      ],
+                                                    )
+                                                  ],
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ));
+                                });
                           },
                           child: const Align(
                             alignment: Alignment.centerLeft,
@@ -99,12 +246,17 @@ class ModePicPage extends StatelessWidget {
                         width: 160,
                         child: Text(
                           textAlign: TextAlign.right,
-                          '${minutes}:${seconds}',
+                          '$minutes:$seconds',
                           style: const TextStyle(
-                            color: Color(0XFFE8D7F1),
-                            fontFamily: 'Milanello',
-                            fontSize: 50,
-                          ),
+                              color: Color(0XFFE8D7F1),
+                              fontFamily: 'Milanello',
+                              fontSize: 50,
+                              shadows: [
+                                Shadow(
+                                    color: Color(0x5F1E1E1E),
+                                    offset: Offset(0.0, 4.0),
+                                    blurRadius: 1.8)
+                              ]),
                         ),
                       ),
                     ],

@@ -54,10 +54,8 @@ class ModePicBloc extends Bloc<ModePicEvent, ModePicState> {
 
   void _onTimeExpired() {
     if (state.score == cardPictures.length ~/ 2) {
-      print("Permainan selesai dengan sukses!");
     } else {
       emit(state.copyWith(isGameFailed: true));
-      print("Waktu habis! Permainan gagal.");
     }
   }
 
@@ -87,18 +85,16 @@ class ModePicBloc extends Bloc<ModePicEvent, ModePicState> {
           selectedIndex1: -1,
           selectedIndex2: -1,
         ));
-        print("Kartu cocok! Skor sekarang: ${state.score + 1}");
       } else {
         await Future.delayed(const Duration(seconds: 1));
         if (!isClosed) {
-          updatedFlippedCards[selectedIndex1] = false; // Balik kartu pertama
-          updatedFlippedCards[event.index] = false; // Balik kartu kedua
+          updatedFlippedCards[selectedIndex1] = false;
+          updatedFlippedCards[event.index] = false;
           emit(state.copyWith(
             flippedCards: updatedFlippedCards,
             selectedIndex1: -1,
             selectedIndex2: -1,
           ));
-          print("Kartu tidak cocok, membalik kembali...");
         }
       }
     }

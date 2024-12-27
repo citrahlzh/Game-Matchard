@@ -12,10 +12,10 @@ class CardFlagWidget extends StatelessWidget {
   final String content;
 
   const CardFlagWidget({
-    Key? key,
+    super.key,
     required this.isFlipped,
     required this.content,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

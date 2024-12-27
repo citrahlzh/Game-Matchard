@@ -68,7 +68,7 @@ class TutorialPage extends StatelessWidget {
                                       child: SizedBox(
                                         width: 1000,
                                         child: Text(
-                                          'Pasangkan kartu dengan memilih 2 kartu secara acak.\nJika pasangan kartu yang dipilih tidak sesuai, kartu tersebut akan berbalik.\nJika pasangan kartu sesuai, maka gambar atau teks di dalam kartu akan tetap terpampang.\nCari dan temukan 9 pasangan kartu dalam waktu 3 menit!',
+                                          'Pasangkan kartu dengan memilih 2 kartu secara acak.\nJika pasangan kartu yang dipilih tidak sesuai, kartu tersebut akan berbalik.\nJika pasangan kartu sesuai, maka gambar atau teks di dalam kartu akan tetap terpampang.\nCari dan temukan 9 pasangan kartu dalam waktu 3 menit!\nSelamat Bermain!',
                                           textAlign: TextAlign.justify,
                                           style: TextStyle(
                                             fontFamily: 'Larken Regular',

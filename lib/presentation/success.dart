@@ -8,12 +8,12 @@ class SuccessPage extends StatelessWidget {
   final String appbarIcon;
 
   const SuccessPage({
-    Key? key,
+    super.key,
     required this.appbarBackground,
     required this.appbarColor,
     required this.appbarLogo,
     required this.appbarIcon,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

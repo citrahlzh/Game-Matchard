@@ -8,12 +8,12 @@ class FailedPage extends StatelessWidget {
   final String appbarIcon;
 
   const FailedPage({
-    Key? key,
+    super.key,
     required this.appbarBackground,
     required this.appbarColor,
     required this.appbarLogo,
     required this.appbarIcon,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
