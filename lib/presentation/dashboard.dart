@@ -25,32 +25,34 @@ class DashboardPage extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         const Image(
+                            height: 150,
+                            fit: BoxFit.fitHeight,
                             image: AssetImage('../../assets/images/logo.png')),
                         const SizedBox(height: 20),
                         const Text(
                           'Matchard !',
                           style: TextStyle(
                               fontFamily: 'Larken Bold',
-                              fontSize: 150,
+                              fontSize: 170,
                               color: Color(0xFFE8D7F1),
                               shadows: [
                                 Shadow(
                                     color: Color(0x5F1E1E1E),
                                     offset: Offset(0.0, 17.0),
-                                    blurRadius: 1.8)
+                                    blurRadius: 2)
                               ]),
                         ),
                         const Text(
                           'Match the Card',
                           style: TextStyle(
                               fontFamily: 'Larken Regular',
-                              fontSize: 40,
+                              fontSize: 50,
                               color: Color(0xFFE8D7F1),
                               shadows: [
                                 Shadow(
                                     color: Color(0x8A1E1E1E),
                                     offset: Offset(0.0, 6.0),
-                                    blurRadius: 2.0)
+                                    blurRadius: 1.8)
                               ]),
                         ),
                         const SizedBox(height: 100),
@@ -58,10 +60,10 @@ class DashboardPage extends StatelessWidget {
                           children: [
                             Stack(children: [
                               Transform.translate(
-                                offset: const Offset(0.0, 20.0),
+                                offset: const Offset(0.0, 25.0),
                                 child: const SizedBox(
-                                  width: 400,
-                                  height: 75,
+                                  width: 500,
+                                  height: 100,
                                   child: DecoratedBox(
                                       decoration: BoxDecoration(
                                           color: Color(0xFFE8D7F1),
@@ -76,8 +78,8 @@ class DashboardPage extends StatelessWidget {
                                 ),
                               ),
                               SizedBox(
-                                  width: 400,
-                                  height: 75,
+                                  width: 500,
+                                  height: 100,
                                   child: DecoratedBox(
                                     decoration: BoxDecoration(
                                         borderRadius:
@@ -110,7 +112,7 @@ class DashboardPage extends StatelessWidget {
                                           style: TextStyle(
                                               fontFamily: 'Bright',
                                               color: Color(0xFFE8D7F1),
-                                              fontSize: 55,
+                                              fontSize: 80,
                                               shadows: [
                                                 Shadow(
                                                     color: Color(0xA11E1E1E),
@@ -121,13 +123,13 @@ class DashboardPage extends StatelessWidget {
                                         )),
                                   ))
                             ]),
-                            const SizedBox(height: 45),
+                            const SizedBox(height: 55),
                             Stack(children: [
                               Transform.translate(
-                                offset: const Offset(0.0, 20.0),
+                                offset: const Offset(0.0, 25.0),
                                 child: const SizedBox(
-                                  width: 400,
-                                  height: 75,
+                                  width: 500,
+                                  height: 100,
                                   child: DecoratedBox(
                                       decoration: BoxDecoration(
                                           color: Color(0xFFE8D7F1),
@@ -142,8 +144,8 @@ class DashboardPage extends StatelessWidget {
                                 ),
                               ),
                               SizedBox(
-                                  width: 400,
-                                  height: 75,
+                                  width: 500,
+                                  height: 100,
                                   child: DecoratedBox(
                                     decoration: BoxDecoration(
                                         borderRadius:
@@ -176,7 +178,7 @@ class DashboardPage extends StatelessWidget {
                                           style: TextStyle(
                                               fontFamily: 'Bright',
                                               color: Color(0xFFE8D7F1),
-                                              fontSize: 55,
+                                              fontSize: 80,
                                               shadows: [
                                                 Shadow(
                                                     color: Color(0xA11E1E1E),

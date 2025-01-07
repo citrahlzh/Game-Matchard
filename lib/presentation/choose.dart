@@ -32,7 +32,7 @@ class ChoosePage extends StatelessWidget {
                           'Pilih Mode !',
                           style: TextStyle(
                               fontFamily: 'Larken Bold',
-                              fontSize: 120,
+                              fontSize: 150,
                               color: Color(0xFFE8D7F1),
                               shadows: [
                                 Shadow(
@@ -60,8 +60,8 @@ class ChoosePage extends StatelessWidget {
                                 Transform.translate(
                                   offset: const Offset(60, 0),
                                   child: const SizedBox(
-                                    width: 300,
-                                    height: 470,
+                                    width: 375,
+                                    height: 580,
                                     child: DecoratedBox(
                                         decoration: BoxDecoration(
                                       color: Color(0xFFE8D7F1),
@@ -69,8 +69,8 @@ class ChoosePage extends StatelessWidget {
                                   ),
                                 ),
                                 const SizedBox(
-                                  width: 300,
-                                  height: 470,
+                                  width: 375,
+                                  height: 580,
                                   child: DecoratedBox(
                                     decoration: BoxDecoration(
                                       color: Color(0xFF7E2E84),
@@ -90,7 +90,7 @@ class ChoosePage extends StatelessWidget {
                                               style: TextStyle(
                                                 color: Color(0XFFE8D7F1),
                                                 fontFamily: 'Bright',
-                                                fontSize: 65,
+                                                fontSize: 80,
                                               ),
                                             ),
                                             Text(
@@ -98,7 +98,7 @@ class ChoosePage extends StatelessWidget {
                                               textAlign: TextAlign.left,
                                               style: TextStyle(
                                                 fontFamily: 'Larken Regular',
-                                                fontSize: 30,
+                                                fontSize: 40,
                                                 color: Color(0xFFE8D7F1),
                                               ),
                                             ),
@@ -119,6 +119,8 @@ class ChoosePage extends StatelessWidget {
                             ),
                             const SizedBox(width: 100),
                             const Image(
+                                height: 170,
+                                fit: BoxFit.fitHeight,
                                 image: AssetImage(
                                     '../../../assets/images/logo.png')),
                             const SizedBox(width: 100),
@@ -137,8 +139,8 @@ class ChoosePage extends StatelessWidget {
                                   Transform.translate(
                                     offset: const Offset(-60, 0),
                                     child: const SizedBox(
-                                      width: 300,
-                                      height: 470,
+                                      width: 375,
+                                      height: 580,
                                       child: DecoratedBox(
                                           decoration: BoxDecoration(
                                         color: Color(0xFF7E2E84),
@@ -146,8 +148,8 @@ class ChoosePage extends StatelessWidget {
                                     ),
                                   ),
                                   const SizedBox(
-                                    width: 300,
-                                    height: 470,
+                                    width: 375,
+                                    height: 580,
                                     child: DecoratedBox(
                                       decoration: BoxDecoration(
                                         color: Color(0xFFE8D7F1),
@@ -167,7 +169,7 @@ class ChoosePage extends StatelessWidget {
                                                 style: TextStyle(
                                                   color: Color(0XFF7E2E84),
                                                   fontFamily: 'Bright',
-                                                  fontSize: 65,
+                                                  fontSize: 80,
                                                 ),
                                               ),
                                               Text(
@@ -175,7 +177,7 @@ class ChoosePage extends StatelessWidget {
                                                 textAlign: TextAlign.left,
                                                 style: TextStyle(
                                                   fontFamily: 'Larken Regular',
-                                                  fontSize: 30,
+                                                  fontSize: 40,
                                                   color: Color(0xFF7E2E84),
                                                 ),
                                               ),
@@ -204,8 +206,8 @@ class ChoosePage extends StatelessWidget {
           floatingActionButton: Padding(
             padding: const EdgeInsets.fromLTRB(20, 39, 20, 0),
             child: SizedBox(
-              height: 50,
-              width: 70,
+              height: 75,
+              width: 105,
               child: FloatingActionButton(
                 onPressed: () {
                   Navigator.push(

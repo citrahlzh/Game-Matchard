@@ -90,8 +90,8 @@ class TutorialPage extends StatelessWidget {
           floatingActionButton: Padding(
             padding: const EdgeInsets.fromLTRB(20, 39, 20, 0),
             child: SizedBox(
-              height: 50,
-              width: 70,
+              height: 75,
+              width: 105,
               child: FloatingActionButton(
                 onPressed: () {
                   Navigator.pop(context);
