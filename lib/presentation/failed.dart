@@ -37,7 +37,7 @@ class FailedPage extends StatelessWidget {
                   //   child: const Image(
                   //       height: 70,
                   //       image: AssetImage(
-                  //           '../../assets/images/arrowback_white.png')),
+                  //           '../..assets/images/arrowback_white.png')),
                   // ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -83,7 +83,7 @@ class FailedPage extends StatelessWidget {
                         color: Color(0xFFD14081),
                         image: DecorationImage(
                             image: AssetImage(
-                                "../../assets/images/background.png"),
+                                "assets/images/background.png"),
                             fit: BoxFit.fitHeight,
                             repeat: ImageRepeat.repeatX,
                             opacity: 1.0)),

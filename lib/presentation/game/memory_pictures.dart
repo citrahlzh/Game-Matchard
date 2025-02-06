@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:game_matchard/application/card_pic.dart';
 import 'package:game_matchard/bloc_manage/modepic_bloc.dart';
 import 'package:game_matchard/presentation/choose.dart';
-import '../success.dart';
-import '../failed.dart';
+import 'package:game_matchard/presentation/failed.dart';
+import 'package:game_matchard/presentation/success.dart';
 
 class ModePicPage extends StatelessWidget {
   const ModePicPage({super.key});
@@ -23,9 +23,9 @@ class ModePicPage extends StatelessWidget {
                     builder: (context) => const FailedPage(
                         appbarBackground: Color(0xFF7E2E84),
                         appbarColor: Color(0xFFE8D7F1),
-                        appbarLogo: '../../assets/images/logo_white.png',
+                        appbarLogo: 'assets/images/logo_white.png',
                         appbarIcon:
-                            '../../assets/images/arrowforward_white.png')),
+                            'assets/images/arrowforward_white.png')),
               );
             });
           }
@@ -38,9 +38,9 @@ class ModePicPage extends StatelessWidget {
                     builder: (context) => const SuccessPage(
                         appbarBackground: Color(0xFF7E2E84),
                         appbarColor: Color(0xFFE8D7F1),
-                        appbarLogo: '../../assets/images/logo_white.png',
+                        appbarLogo: 'assets/images/logo_white.png',
                         appbarIcon:
-                            '../../assets/images/arrowforward_white.png')),
+                            'assets/images/arrowforward_white.png')),
               );
             });
           }
@@ -217,7 +217,7 @@ class ModePicPage extends StatelessWidget {
                             child: Image(
                                 height: 55,
                                 image: AssetImage(
-                                    '../../assets/images/arrowback_white.png')),
+                                    'assets/images/arrowback_white.png')),
                           ),
                         ),
                       ),
@@ -239,7 +239,7 @@ class ModePicPage extends StatelessWidget {
                           SizedBox(width: 15),
                           Image(
                               image: AssetImage(
-                                  '../../assets/images/logo_white.png'))
+                                  'assets/images/logo_white.png'))
                         ],
                       ),
                       SizedBox(
@@ -275,7 +275,7 @@ class ModePicPage extends StatelessWidget {
                               color: Color(0xFFD14081),
                               image: DecorationImage(
                                   image: AssetImage(
-                                      "../../assets/images/background.png"),
+                                      "assets/images/background.png"),
                                   fit: BoxFit.fitHeight,
                                   repeat: ImageRepeat.repeatX,
                                   opacity: 1.0)),

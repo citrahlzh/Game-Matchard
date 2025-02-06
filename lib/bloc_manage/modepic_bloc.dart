@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'dart:math';
-import '../application/card_pic.dart';
+import 'package:game_matchard/application/card_pic.dart';
 
 part 'modepic_state.dart';
 part 'modepic_event.dart';

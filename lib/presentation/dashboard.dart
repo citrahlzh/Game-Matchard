@@ -15,7 +15,7 @@ class DashboardPage extends StatelessWidget {
                 decoration: const BoxDecoration(
                     color: Color(0xFFD14081),
                     image: DecorationImage(
-                        image: AssetImage("../../assets/images/background.png"),
+                        image: AssetImage("assets/images/background.png"),
                         fit: BoxFit.fitHeight,
                         repeat: ImageRepeat.repeatX,
                         opacity: 1.0)),
@@ -27,7 +27,7 @@ class DashboardPage extends StatelessWidget {
                         const Image(
                             height: 150,
                             fit: BoxFit.fitHeight,
-                            image: AssetImage('../../assets/images/logo.png')),
+                            image: AssetImage('assets/images/logo.png')),
                         const SizedBox(height: 20),
                         const Text(
                           'Matchard !',

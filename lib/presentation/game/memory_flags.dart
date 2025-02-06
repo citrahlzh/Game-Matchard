@@ -3,8 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:game_matchard/application/flag_pic.dart';
 import 'package:game_matchard/bloc_manage/modeflag_bloc.dart';
 import 'package:game_matchard/presentation/choose.dart';
-import '../success.dart';
-import '../failed.dart';
+import 'package:game_matchard/presentation/failed.dart';
+import 'package:game_matchard/presentation/success.dart';
 
 class ModeFlagPage extends StatelessWidget {
   const ModeFlagPage({super.key});
@@ -23,9 +23,9 @@ class ModeFlagPage extends StatelessWidget {
                     builder: (context) => const FailedPage(
                         appbarBackground: Color(0xFFE8D7F1),
                         appbarColor: Color(0xFF7E2E84),
-                        appbarLogo: '../../assets/images/logo_purple.png',
+                        appbarLogo: 'assets/images/logo_purple.png',
                         appbarIcon:
-                            '../../assets/images/arrowforward_purple.png')),
+                            'assets/images/arrowforward_purple.png')),
               );
             });
           }
@@ -38,9 +38,9 @@ class ModeFlagPage extends StatelessWidget {
                     builder: (context) => const SuccessPage(
                         appbarBackground: Color(0xFFE8D7F1),
                         appbarColor: Color(0xFF7E2E84),
-                        appbarLogo: '../../assets/images/logo_purple.png',
+                        appbarLogo: 'assets/images/logo_purple.png',
                         appbarIcon:
-                            '../../assets/images/arrowforward_purple.png')),
+                            'assets/images/arrowforward_purple.png')),
               );
             });
           }
@@ -217,7 +217,7 @@ class ModeFlagPage extends StatelessWidget {
                             child: Image(
                                 height: 55,
                                 image: AssetImage(
-                                    '../../assets/images/arrowback_purple.png')),
+                                    'assets/images/arrowback_purple.png')),
                           ),
                         ),
                       ),
@@ -239,7 +239,7 @@ class ModeFlagPage extends StatelessWidget {
                           SizedBox(width: 15),
                           Image(
                               image: AssetImage(
-                                  '../../assets/images/logo_purple.png'))
+                                  'assets/images/logo_purple.png'))
                         ],
                       ),
                       SizedBox(
@@ -275,7 +275,7 @@ class ModeFlagPage extends StatelessWidget {
                               color: Color(0xFFD14081),
                               image: DecorationImage(
                                   image: AssetImage(
-                                      "../../assets/images/background.png"),
+                                      "assets/images/background.png"),
                                   fit: BoxFit.fitHeight,
                                   repeat: ImageRepeat.repeatX,
                                   opacity: 1.0)),

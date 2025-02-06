@@ -19,7 +19,7 @@ class ChoosePage extends StatelessWidget {
                 decoration: const BoxDecoration(
                     color: Color(0xFFD14081),
                     image: DecorationImage(
-                        image: AssetImage("../../assets/images/background.png"),
+                        image: AssetImage("assets/images/background.png"),
                         fit: BoxFit.fitHeight,
                         repeat: ImageRepeat.repeatX,
                         opacity: 1.0)),
@@ -107,7 +107,7 @@ class ChoosePage extends StatelessWidget {
                                               alignment: Alignment.bottomRight,
                                               child: Image(
                                                 image: AssetImage(
-                                                    '../../../assets/images/arrowforward_white.png'),
+                                                    'assets/images/arrowforward_white.png'),
                                                 height: 60,
                                               ),
                                             )
@@ -122,7 +122,7 @@ class ChoosePage extends StatelessWidget {
                                 height: 170,
                                 fit: BoxFit.fitHeight,
                                 image: AssetImage(
-                                    '../../../assets/images/logo.png')),
+                                    'assets/images/logo.png')),
                             const SizedBox(width: 100),
                             GestureDetector(
                               onTap: () {
@@ -187,7 +187,7 @@ class ChoosePage extends StatelessWidget {
                                                     Alignment.bottomRight,
                                                 child: Image(
                                                   image: AssetImage(
-                                                      '../../../assets/images/arrowforward_purple.png'),
+                                                      'assets/images/arrowforward_purple.png'),
                                                   height: 60,
                                                 ),
                                               )
@@ -225,7 +225,7 @@ class ChoosePage extends StatelessWidget {
                 child: const Image(
                     fit: BoxFit.contain,
                     image:
-                        AssetImage('../../assets/images/arrowback_white.png')),
+                        AssetImage('assets/images/arrowback_white.png')),
               ),
             ),
           ),

@@ -36,35 +36,35 @@ class CardPicWidget extends StatelessWidget {
             child: isFlipped
                 ? Image(image: AssetImage(content))
                 : const Image(
-                    image: AssetImage('../../assets/images/box_purple.png'))),
+                    image: AssetImage('assets/images/box_purple.png'))),
       ),
     );
   }
 }
 
   final List<CardPic> cardPictures = [
-    CardPic(imagePath: '../../assets/images/pic/Ball1.png', matchKey: 'Ball'),
-    CardPic(imagePath: '../../assets/images/pic/Ball2.png', matchKey: 'Ball'),
+    CardPic(imagePath: 'assets/images/pic/Ball1.png', matchKey: 'Ball'),
+    CardPic(imagePath: 'assets/images/pic/Ball2.png', matchKey: 'Ball'),
     CardPic(
-        imagePath: '../../assets/images/pic/Carrot1.png', matchKey: 'Carrot'),
+        imagePath: 'assets/images/pic/Carrot1.png', matchKey: 'Carrot'),
     CardPic(
-        imagePath: '../../assets/images/pic/Carrot2.png', matchKey: 'Carrot'),
+        imagePath: 'assets/images/pic/Carrot2.png', matchKey: 'Carrot'),
     CardPic(
-        imagePath: '../../assets/images/pic/Chicken1.png', matchKey: 'Chicken'),
+        imagePath: 'assets/images/pic/Chicken1.png', matchKey: 'Chicken'),
     CardPic(
-        imagePath: '../../assets/images/pic/Chicken2.png', matchKey: 'Chicken'),
-    CardPic(imagePath: '../../assets/images/pic/Coin1.png', matchKey: 'Coin'),
-    CardPic(imagePath: '../../assets/images/pic/Coin2.png', matchKey: 'Coin'),
-    CardPic(imagePath: '../../assets/images/pic/Egg1.png', matchKey: 'Egg'),
-    CardPic(imagePath: '../../assets/images/pic/Egg2.png', matchKey: 'Egg'),
-    CardPic(imagePath: '../../assets/images/pic/Lampu1.png', matchKey: 'Lampu'),
-    CardPic(imagePath: '../../assets/images/pic/Lampu2.png', matchKey: 'Lampu'),
-    CardPic(imagePath: '../../assets/images/pic/Photo1.png', matchKey: 'Photo'),
-    CardPic(imagePath: '../../assets/images/pic/Photo2.png', matchKey: 'Photo'),
+        imagePath: 'assets/images/pic/Chicken2.png', matchKey: 'Chicken'),
+    CardPic(imagePath: 'assets/images/pic/Coin1.png', matchKey: 'Coin'),
+    CardPic(imagePath: 'assets/images/pic/Coin2.png', matchKey: 'Coin'),
+    CardPic(imagePath: 'assets/images/pic/Egg1.png', matchKey: 'Egg'),
+    CardPic(imagePath: 'assets/images/pic/Egg2.png', matchKey: 'Egg'),
+    CardPic(imagePath: 'assets/images/pic/Lampu1.png', matchKey: 'Lampu'),
+    CardPic(imagePath: 'assets/images/pic/Lampu2.png', matchKey: 'Lampu'),
+    CardPic(imagePath: 'assets/images/pic/Photo1.png', matchKey: 'Photo'),
+    CardPic(imagePath: 'assets/images/pic/Photo2.png', matchKey: 'Photo'),
     CardPic(
-        imagePath: '../../assets/images/pic/Rabbit1.png', matchKey: 'Rabbit'),
+        imagePath: 'assets/images/pic/Rabbit1.png', matchKey: 'Rabbit'),
     CardPic(
-        imagePath: '../../assets/images/pic/Rabbit2.png', matchKey: 'Rabbit'),
-    CardPic(imagePath: '../../assets/images/pic/Star1.png', matchKey: 'Star'),
-    CardPic(imagePath: '../../assets/images/pic/Star2.png', matchKey: 'Star'),
+        imagePath: 'assets/images/pic/Rabbit2.png', matchKey: 'Rabbit'),
+    CardPic(imagePath: 'assets/images/pic/Star1.png', matchKey: 'Star'),
+    CardPic(imagePath: 'assets/images/pic/Star2.png', matchKey: 'Star'),
   ];

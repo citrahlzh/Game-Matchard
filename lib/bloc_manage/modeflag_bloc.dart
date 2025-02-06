@@ -2,7 +2,7 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 import 'dart:math';
-import '../application/flag_pic.dart';
+import 'package:game_matchard/application/flag_pic.dart';
 
 part 'modeflag_state.dart';
 part 'modeflag_event.dart';

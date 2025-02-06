@@ -48,7 +48,7 @@ class CardFlagWidget extends StatelessWidget {
                         ),
                       ) // Display text
                 : const Image(
-                    image: AssetImage('../../assets/images/box_white.png'))),
+                    image: AssetImage('assets/images/box_white.png'))),
       ),
     );
   }
@@ -56,58 +56,55 @@ class CardFlagWidget extends StatelessWidget {
 
 final List<CardFlag> cardFlags = [
   CardFlag(
-      imagePath:
-          '../../assets/images/flag/Flag_of_Australia_(converted).svg.png',
+      imagePath: 'assets/images/flag/Flag_of_Australia_(converted).svg.png',
       matchKey: 'Australia'),
   CardFlag(
-      imagePath: '../../assets/images/flag/Flag_of_Brazil.svg.png',
+      imagePath: 'assets/images/flag/Flag_of_Brazil.svg.png',
       matchKey: 'Brazil'),
   CardFlag(
-      imagePath: '../../assets/images/flag/Flag_of_Canada.svg.png',
+      imagePath: 'assets/images/flag/Flag_of_Canada.svg.png',
       matchKey: 'Kanada'),
   CardFlag(
-      imagePath: '../../assets/images/flag/Flag_of_India.svg.png',
-      matchKey: 'India'),
+      imagePath: 'assets/images/flag/Flag_of_India.svg.png', matchKey: 'India'),
   CardFlag(
-      imagePath: '../../assets/images/flag/Flag_of_Indonesia.svg.png',
+      imagePath: 'assets/images/flag/Flag_of_Indonesia.svg.png',
       matchKey: 'Indonesia'),
   CardFlag(
-      imagePath: '../../assets/images/flag/Flag_of_Japan.svg.png',
+      imagePath: 'assets/images/flag/Flag_of_Japan.svg.png',
       matchKey: 'Jepang'),
   CardFlag(
-      imagePath: '../../assets/images/flag/Flag_of_Laos.svg.png',
-      matchKey: 'Laos'),
+      imagePath: 'assets/images/flag/Flag_of_Laos.svg.png', matchKey: 'Laos'),
   CardFlag(
-      imagePath: '../../assets/images/flag/Flag_of_Malaysia.svg.png',
+      imagePath: 'assets/images/flag/Flag_of_Malaysia.svg.png',
       matchKey: 'Malaysia'),
   CardFlag(
-      imagePath: '../../assets/images/flag/Flag_of_Myanmar.svg.png',
+      imagePath: 'assets/images/flag/Flag_of_Myanmar.svg.png',
       matchKey: 'Myanmar'),
   CardFlag(
-      imagePath: '../../assets/images/flag/Flag_of_Palestine.svg.png',
+      imagePath: 'assets/images/flag/Flag_of_Palestine.svg.png',
       matchKey: 'Palestina'),
   CardFlag(
-      imagePath: '../../assets/images/flag/Flag_of_Saudi_Arabia.svg.png',
+      imagePath: 'assets/images/flag/Flag_of_Saudi_Arabia.svg.png',
       matchKey: 'Saudi Arabia'),
   CardFlag(
-      imagePath: '../../assets/images/flag/Flag_of_Singapore.svg.png',
+      imagePath: 'assets/images/flag/Flag_of_Singapore.svg.png',
       matchKey: 'Singapora'),
   CardFlag(
-      imagePath: '../../assets/images/flag/Flag_of_South_Korea.svg.png',
+      imagePath: 'assets/images/flag/Flag_of_South_Korea.svg.png',
       matchKey: 'Korea Selatan'),
   CardFlag(
-      imagePath: '../../assets/images/flag/Flag_of_Spain.svg.png',
+      imagePath: 'assets/images/flag/Flag_of_Spain.svg.png',
       matchKey: 'Spanyol'),
   CardFlag(
-      imagePath: '../../assets/images/flag/Flag_of_the_Philippines.svg.png',
+      imagePath: 'assets/images/flag/Flag_of_the_Philippines.svg.png',
       matchKey: 'Filipina'),
   CardFlag(
-      imagePath: '../../assets/images/flag/Flag_of_the_United_Kingdom.svg.png',
+      imagePath: 'assets/images/flag/Flag_of_the_United_Kingdom.svg.png',
       matchKey: 'Inggris'),
   CardFlag(
-      imagePath: '../../assets/images/flag/Flag_of_the_United_States.svg.png',
+      imagePath: 'assets/images/flag/Flag_of_the_United_States.svg.png',
       matchKey: 'Amerika Serikat'),
   CardFlag(
-      imagePath: '../../assets/images/flag/Flag_of_Turkey.svg.png',
+      imagePath: 'assets/images/flag/Flag_of_Turkey.svg.png',
       matchKey: 'Turki'),
 ];
